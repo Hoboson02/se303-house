@@ -4,14 +4,6 @@ class House
 		"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}#{rat(number)}#{malt(number)}house that Jack built.\n"
 	end
 
-	def malt(number)
-		if number >= 2
-			"malt that lay in the "
-		else
-			""
-		end
-	end
-
 	def horse_hound(number)
 		if number >= 12
 			"horse and the hound and the horn that belonged to the "
@@ -87,6 +79,14 @@ class House
 	def rat(number)
 		if number >= 3
 			"rat that ate the "
+		else
+			""
+		end
+	end
+
+	def malt(number)
+		if number >= 2
+			"malt that lay in the "
 		else
 			""
 		end
