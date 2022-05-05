@@ -11,9 +11,9 @@ class House
 		when 4
 			"This is the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		when 5
-			"This is the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		else
-			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		end
 	end
 
@@ -68,6 +68,14 @@ class House
 	def maiden(number)
 		if number >= 7
 			"maiden all forlorn that milked the "
+		else
+			""
+		end
+	end
+
+	def cow(number)
+		if number >= 6
+			"cow with the crumpled horn that tossed the "
 		else
 			""
 		end
