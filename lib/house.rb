@@ -19,9 +19,9 @@ class House
 		when 8
 			"This is the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		when 9
-			"This is the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		else
-			"This is the #{horse_hound(number)}#{corn(number)}rooster that crowed in the morn that woke the priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}priest all shaven and shorn that married the man all tattered and torn that kissed the maiden all forlorn that milked the cow with the crumpled horn that tossed the dog that worried the cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
 		end
 	end
 
@@ -44,6 +44,14 @@ class House
 	def corn(number)
 		if number >= 11
 			"farmer sowing his corn that kept the "
+		else
+			""
+		end
+	end
+
+	def rooster(number)
+		if number >= 10
+			"rooster that crowed in the morn that woke the "
 		else
 			""
 		end
