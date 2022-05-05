@@ -6,8 +6,6 @@ class House
 			"This is the #{malt(number)}house that Jack built.\n"
 		when 2
 			"This is the #{malt(number)}house that Jack built.\n"
-		when 3
-			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}rat that ate the malt that lay in the house that Jack built.\n"
 		else
 			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}rat that ate the malt that lay in the house that Jack built.\n"
 		end
