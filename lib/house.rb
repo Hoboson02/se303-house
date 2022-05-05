@@ -7,9 +7,9 @@ class House
 		when 2
 			"This is the #{malt(number)}house that Jack built.\n"
 		when 3
-			"This is the rat that ate the malt that lay in the house that Jack built.\n"
+			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}rat that ate the malt that lay in the house that Jack built.\n"
 		else
-			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}#{dog(number)}cat that killed the rat that ate the malt that lay in the house that Jack built.\n"
+			"This is the #{horse_hound(number)}#{corn(number)}#{rooster(number)}#{priest(number)}#{tattered(number)}#{maiden(number)}#{cow(number)}#{dog(number)}#{cat(number)}rat that ate the malt that lay in the house that Jack built.\n"
 		end
 	end
 
@@ -80,6 +80,14 @@ class House
 	def dog(number)
 		if number >= 5
 			"dog that worried the "
+		else
+			""
+		end
+	end
+
+	def cat(number)
+		if number >= 4
+			"cat that killed the "
 		else
 			""
 		end
