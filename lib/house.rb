@@ -41,3 +41,7 @@ class OriginalHouse
 	end
 
 end
+
+class PirateHouse
+	
+end
