@@ -53,3 +53,7 @@ class OriginalHouse < House
 		end
 	end
 end
+
+class PirateHouse < OriginalHouse
+	
+end
