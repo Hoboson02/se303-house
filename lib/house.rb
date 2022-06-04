@@ -1,8 +1,10 @@
 class House
-
+	def prefix
+		"This is "
+	end
 	def line(number)
 		lines = number.downto(0).collect {|i| phrase(i)}.join()
-		"This is the #{lines}house that Jack built.\n"
+		"#{prefix}the #{lines}house that Jack built.\n"
 	end
 
 	def phrase(number)
