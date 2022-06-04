@@ -1,6 +1,13 @@
 class House
+
+	attr_reader :version
+
+	def initialize(version = OriginalHouse)
+		@version = version
+	end
+
 	def line(number)
-		OriginalHouse.new(number).line(number)
+		version.new(number).line(number)
 	end
 	def recite()
 		1.upto(12).collect {|i| line(i)}.join("\n")
@@ -54,6 +61,8 @@ class OriginalHouse < House
 	end
 end
 
-class PirateHouse < OriginalHouse
-	
+class PirateHouse < House
+	def prefix
+		"Thar be "
+	end
 end
