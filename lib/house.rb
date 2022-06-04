@@ -1,4 +1,4 @@
-class House
+class OriginalHouse
 	def prefix
 		"This is "
 	end
