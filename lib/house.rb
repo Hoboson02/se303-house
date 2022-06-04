@@ -1,4 +1,4 @@
-class OriginalHouse
+class House
 	def prefix
 		"This is "
 	end
@@ -40,8 +40,4 @@ class OriginalHouse
 		1.upto(12).collect {|i| line(i)}.join("\n")
 	end
 
-end
-
-class PirateHouse
-	
 end
