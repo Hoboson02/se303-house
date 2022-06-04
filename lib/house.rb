@@ -41,3 +41,7 @@ class House
 	end
 
 end
+
+class OriginalHouse
+
+end
