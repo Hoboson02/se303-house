@@ -43,7 +43,7 @@ class OriginalHouse
 		"This is "
 	end
 	def line(number)
-		lines = number.downto(0).collect {|i| phrase(i)}.join()
+		lines = (number - 1).downto(0).collect {|i| @phrases[i]}.join()
 		"#{prefix}the #{lines}\n"
 	end
 
