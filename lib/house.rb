@@ -46,37 +46,6 @@ class OriginalHouse
 		lines = (number - 1).downto(0).collect {|i| @phrases[i]}.join()
 		"#{prefix}the #{lines}\n"
 	end
-
-	def phrase(number)
-		case number 
-		when 12
-			@phrases[11]
-		when 11
-			@phrases[10]
-		when 10
-			@phrases[9]
-		when 9
-			@phrases[8]
-		when 8
-			@phrases[7]
-		when 7
-			@phrases[6]
-		when 6
-			@phrases[5]
-		when 5
-			@phrases[4]
-		when 4
-			@phrases[3]
-		when 3
-			@phrases[2]
-		when 2
-			@phrases[1]
-		when 1
-			@phrases[0]
-		else
-			""
-		end
-	end
 end
 
 class PirateHouse < OriginalHouse
