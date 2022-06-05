@@ -1,9 +1,10 @@
 class House
 
-	attr_reader :version
+	attr_reader :version, :randomized
 
-	def initialize(version = "Original")
+	def initialize(version = "Original", randomized = false)
 		@version = version
+		@randomized = randomized
 		@phrases = [
 			"house that Jack built.", 
 			"malt that lay in the ", 
@@ -22,14 +23,17 @@ class House
 
 	def prefix
 		case version 
-		when "Original"
-			"This is "
-		else
+		when "Pirate"
 			"Thar be "
+		else
+			"This is "
 		end
 	end
 
 	def line(number)
+		if randomized 
+			@phrases.shuffle!
+		end
 		lines = (number - 1).downto(0).collect {|i| @phrases[i]}.join()
 		"#{prefix}the #{lines}\n"
 	end
