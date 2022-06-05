@@ -2,7 +2,7 @@ class House
 
 	attr_reader :version, :randomized
 
-	def initialize(version = "Original", randomized = false)
+	def initialize(version = "Original", randomized = false, complex_randomized = false)
 		@version = version
 		@randomized = randomized
 		@phrases = [
@@ -69,3 +69,30 @@ class House
 	end
 
 end
+
+@subjects = [
+      "malt",
+      "rat",
+      "cat",
+      "dog",
+      "cow with the crumpled horn",
+      "maiden all forlorn",
+      "man all tattered and torn",
+      "priest all shaven and shorn",
+      "rooster that crowed in the morn",
+      "farmer sowing his corn",
+      "horse and the hound and the horn"
+		]
+		@verbs = [
+			"lay in",
+      "ate",
+      "killed",
+      "worried",
+      "tossed",
+      "milked",
+      "kissed",
+      "married",
+      "woke",
+      "kept",
+      "belonged to"
+		]
