@@ -15,7 +15,7 @@ class House
 
 end
 
-class OriginalHouse < House
+class OriginalHouse
 
 	attr_reader :number
 	
@@ -61,7 +61,7 @@ class OriginalHouse < House
 	end
 end
 
-class PirateHouse < House
+class PirateHouse < OriginalHouse
 	def prefix
 		"Thar be "
 	end
