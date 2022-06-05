@@ -24,6 +24,7 @@ class OriginalHouse
 	def initialize(number)
 		@number = number 
 		@phrases = [
+			"house that Jack built.", 
 			"malt that lay in the ", 
 			"rat that ate the ",
 			"cat that killed the ",
@@ -34,7 +35,7 @@ class OriginalHouse
 			"priest all shaven and shorn that married the ",
 			"rooster that crowed in the morn that woke the ",
 			"farmer sowing his corn that kept the ", 
-			"horse and the hound and the horn that belonged to the ", 
+			"horse and the hound and the horn that belonged to the "
 		]
 	end
 
@@ -43,7 +44,7 @@ class OriginalHouse
 	end
 	def line(number)
 		lines = number.downto(0).collect {|i| phrase(i)}.join()
-		"#{prefix}the #{lines}house that Jack built.\n"
+		"#{prefix}the #{lines}\n"
 	end
 
 	def phrase(number)
@@ -70,6 +71,8 @@ class OriginalHouse
 			"rat that ate the "
 		when 2
 			"malt that lay in the "
+		when 1
+			"house that Jack built."
 		else
 			""
 		end
