@@ -50,29 +50,29 @@ class OriginalHouse
 	def phrase(number)
 		case number 
 		when 12
-			"horse and the hound and the horn that belonged to the "
+			@phrases[11]
 		when 11
-			"farmer sowing his corn that kept the "
+			@phrases[10]
 		when 10
-			"rooster that crowed in the morn that woke the "
+			@phrases[9]
 		when 9
-			"priest all shaven and shorn that married the "
+			@phrases[8]
 		when 8
-			"man all tattered and torn that kissed the "
+			@phrases[7]
 		when 7
-			"maiden all forlorn that milked the "
+			@phrases[6]
 		when 6
-			"cow with the crumpled horn that tossed the "
+			@phrases[5]
 		when 5
-			"dog that worried the "
+			@phrases[4]
 		when 4
-			"cat that killed the "
+			@phrases[3]
 		when 3
-			"rat that ate the "
+			@phrases[2]
 		when 2
-			"malt that lay in the "
+			@phrases[1]
 		when 1
-			"house that Jack built."
+			@phrases[0]
 		else
 			""
 		end
