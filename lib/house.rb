@@ -66,3 +66,7 @@ class PirateHouse < OriginalHouse
 		"Thar be "
 	end
 end
+
+class RandomHouse < OriginalHouse
+
+end
