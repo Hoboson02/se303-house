@@ -1,10 +1,11 @@
 class House
 
-	attr_reader :version, :randomized
+	attr_reader :version, :randomized, :complex_randomized
 
 	def initialize(version = "Original", randomized = false, complex_randomized = false)
 		@version = version
 		@randomized = randomized
+		@complex_randomized = complex_randomized
 		@phrases = [
 			"house that Jack built.", 
 			"malt that lay in the ", 
