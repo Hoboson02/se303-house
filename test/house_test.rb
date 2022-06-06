@@ -220,7 +220,7 @@ This is the cow with the crumpled horn that tossed the rooster that crowed in th
   end
 
 
-  def test_random_pirate_line_3
+  def test_random_pirate_line
     expected = "Thar be the rooster that crowed in the morn that woke the horse and the hound and the horn that belonged to the house that Jack built.\n"
     srand 54321
     assert_equal expected, House.new("Pirate", true).line(3)
@@ -256,13 +256,18 @@ Thar be the cow with the crumpled horn that tossed the rooster that crowed in th
     srand 54321
     assert_equal expected, House.new("Pirate", true).recite
   end
-end
-# def test_complex_random_line_1
-#   expected = "This is the house that Jack built.\n"
-#   assert_equal expected, House.new("Pirate",true, true).line(srand(SOME_NUMBER))
-# end
 
-# def test_complex_random_line_1
-#   expected = "This is the cat that lay in the house that Jack built.\n"
-#   assert_equal expected, House.new("Pirate",true, true).line(1)
-# end
+  def test_complex_random_line
+    expected = "This is the maiden all forlorn that kept the rooster that crowed in the morn that belonged to the horse and the hound and the horn that woke the house that Jack built.\n"
+    srand 54321
+    assert_equal expected, House.new("Original",true, true).line(3)
+  end
+
+  # def test_all_complex_random_lines
+  #   excpected = <<-TEXT
+
+  #   TEXT
+  #   srand 54321
+  #   assert_equal expected, House.new()
+
+end

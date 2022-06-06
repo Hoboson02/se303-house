@@ -20,30 +20,30 @@ class House
 			"horse and the hound and the horn that belonged to the "
 		]
 		@subjects = [
-      "malt",
-      "rat",
-      "cat",
-      "dog",
-      "cow with the crumpled horn",
-      "maiden all forlorn",
-      "man all tattered and torn",
-      "priest all shaven and shorn",
-      "rooster that crowed in the morn",
-      "farmer sowing his corn",
-      "horse and the hound and the horn"
+      "malt ",
+      "rat ",
+      "cat ",
+      "dog ",
+      "cow with the crumpled horn ",
+      "maiden all forlorn ",
+      "man all tattered and torn ",
+      "priest all shaven and shorn ",
+      "rooster that crowed in the morn ",
+      "farmer sowing his corn ",
+      "horse and the hound and the horn "
 		]
 		@verbs = [
-			"lay in",
-      "ate",
-      "killed",
-      "worried",
-      "tossed",
-      "milked",
-      "kissed",
-      "married",
-      "woke",
-      "kept",
-      "belonged to"
+			"lay in ",
+      "ate ",
+      "killed ",
+      "worried ",
+      "tossed ",
+      "milked ",
+      "kissed ",
+      "married ",
+      "woke ",
+      "kept ",
+      "belonged to "
 		]
 	end
 
@@ -57,17 +57,18 @@ class House
 	end
 
 	def line(number)
-		# if complex_randomized
-		# 	@subjects.shuffle!
-		# 	@verbs.shuffle!
-		# 	lines = (number - 1).downto(0).collect {|i| "#{@subjects[i]}#{@verbs[i]}"}.join()
-		# 	"#{prefix}the #{lines}\n"
-		# else
-		if randomized 
-			@phrases.shuffle!
+		if complex_randomized
+			@subjects.shuffle!
+			@verbs.shuffle!
+			lines = (number - 1).downto(0).collect {|i| "the #{@subjects[i]}that #{@verbs[i]}"}.join()
+			"#{prefix}#{lines}the house that Jack built.\n"
+		else
+			if randomized 
+				@phrases.shuffle!
+			end
+			lines = (number - 2).downto(0).collect {|i| @phrases[i]}.join()
+			"#{prefix}the #{lines}house that Jack built.\n"
 		end
-		lines = (number - 2).downto(0).collect {|i| @phrases[i]}.join()
-		"#{prefix}the #{lines}house that Jack built.\n"
 	end
 
 	def recite()
