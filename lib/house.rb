@@ -58,11 +58,15 @@ class House
 	end
 
 	def line(number)
-		if randomized 
-			@phrases.shuffle!
+		if complex_randomized
+			
+		else
+			if randomized 
+				@phrases.shuffle!
+			end
+			lines = (number - 1).downto(0).collect {|i| @phrases[i]}.join()
+			"#{prefix}the #{lines}\n"
 		end
-		lines = (number - 1).downto(0).collect {|i| @phrases[i]}.join()
-		"#{prefix}the #{lines}\n"
 	end
 
 	def recite()
