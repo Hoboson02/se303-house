@@ -60,7 +60,7 @@ class House
 		if complex_randomized
 			@subjects.shuffle!
 			@verbs.shuffle!
-			lines = (number - 1).downto(0).collect {|i| "the #{@subjects[i]}that #{@verbs[i]}"}.join()
+			lines = (number - 2).downto(0).collect {|i| "the #{@subjects[i]}that #{@verbs[i]}"}.join()
 			"#{prefix}#{lines}the house that Jack built.\n"
 		else
 			if randomized 
